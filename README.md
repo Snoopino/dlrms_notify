@@ -14,7 +14,7 @@ Using for (Server-Side) :
 TriggerClientEvent('dlrms_notify','type','type_your_message_here', duration)
 ```
 
-# If no duration is given, will default to 3000ms
+## If no duration is given, will default to 3000ms
 
 ### Notification types
 * Information - 'info'
