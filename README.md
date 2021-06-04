@@ -1,7 +1,4 @@
-# dlrms_notify
-Fivem Notification Script
-
-## Use
+# Fivem Notification Script
 Using for (Client-Side) :
 
 ```lua
