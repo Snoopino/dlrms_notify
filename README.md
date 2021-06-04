@@ -5,13 +5,13 @@ Fivem Notification Script
 Using for (Client-Side) :
 
 ```lua
-TriggerEvent('dlrms_notify','type','Type_your_message_here', duration)
+TriggerEvent('dlrms_notify','type','type_your_message_here', duration)
 ```
 
 Using for (Server-Side) :
 
 ```lua
-TriggerClientEvent('dlrms_notify','type','Type_your_message_here', duration)
+TriggerClientEvent('dlrms_notify','type','type_your_message_here', duration)
 ```
 
 # If no duration is given, will default to 3000ms
