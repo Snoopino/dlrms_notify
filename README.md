@@ -19,9 +19,12 @@ TriggerClientEvent('dlrms_notify','type','Type_your_message_here', duration)
 * Success - 'success'
 * Warning - 'warn'
 
-![Image of Notification](https://media.discordapp.net/attachments/850181379778150420/850181476230103110/Screenshot_9.png?width=1202&height=676)
+### Original type
+![Image of Notification](https://media.discordapp.net/attachments/850181379778150420/851482601444737024/Screenshot_14.png?width=1202&height=676)
 
-### White information css and svg's
+### White type
+![Image of Notification](https://media.discordapp.net/attachments/850181379778150420/851482443324194856/Screenshot_13.png?width=1202&height=676)
+
 ```css
 .dlrms-container {
     position: fixed;
