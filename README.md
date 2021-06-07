@@ -21,7 +21,7 @@ TriggerClientEvent('dlrms_notify','type','Type_your_message_here', duration)
 
 ![Image of Notification](https://media.discordapp.net/attachments/850181379778150420/850181476230103110/Screenshot_9.png?width=1202&height=676)
 
-### White İnformation
+### White card css
 ```css
 .dlrms-container {
     position: fixed;
