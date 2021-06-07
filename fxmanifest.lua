@@ -1,6 +1,6 @@
 fx_version 'adamant'
 games { 'gta5' }
-author 'https://github.com/Delarmuss/'
+author 'Delarmuss'
 client_scripts {
 	'client/client.lua'
 }

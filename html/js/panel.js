@@ -48,7 +48,7 @@ window.addEventListener('message', function (event) {
 	}
 
 	const styles = `
-		.vt-container {
+		.dlrms-container {
 			position: fixed;
 			width: 100%;
 			height: 100vh;
@@ -62,12 +62,12 @@ window.addEventListener('message', function (event) {
     		-moz-osx-font-smoothing: grayscale;
 		}
 
-		.vt-row {
+		.dlrms-row {
 			display: flex;
 			justify-content: space-between;
 		}
 
-		.vt-col {
+		.dlrms-col {
 			flex: 1;
 			margin: 10px;
 			display: flex;
@@ -75,17 +75,17 @@ window.addEventListener('message', function (event) {
 			align-items: center;
 		}
 
-		.vt-col.top-left,
-		.vt-col.bottom-left {
+		.dlrms-col.top-left,
+		.dlrms-col.bottom-left {
 			align-items: flex-start;
 		}
 
-		.vt-col.top-right,
-		.vt-col.bottom-right {
+		.dlrms-col.top-right,
+		.dlrms-col.bottom-right {
 			align-items: flex-end;
 		}
 
-		.vt-card {
+		.dlrms-card {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -99,38 +99,38 @@ window.addEventListener('message', function (event) {
 			cursor: pointer;
 		}
 
-		.vt-card.success {
+		.dlrms-card.success {
 			box-shadow: 0 0px 2px #2CA342;
 			background: #2CA342;
 		}
 		
-		.vt-card.warn {
+		.dlrms-card.warn {
 			box-shadow: 0 0px 2px #FFBF00;
 			background: #FFBF00;
 		}
 
-		.vt-card.info {
+		.dlrms-card.info {
 			box-shadow: 0 0px 2px #1271ec;
 			background: #1271ec;
 		}
 
-		.vt-card.error {
+		.dlrms-card.error {
 			box-shadow: 0 0px 2px #d60a2e;
 			background: #d60a2e;
 		}
 
-		.vt-card .text-group {
+		.dlrms-card .text-group {
 			margin-left: 10px;
 		}
 
-		.vt-card h4 {
+		.dlrms-card h4 {
 			margin: 0;
 			margin-bottom: 10px;
 			font-size: 16px;
 			font-weight: 500;
 		}
 
-		.vt-card p {
+		.dlrms-card p {
 			margin: 0;
 			font-size: 14px;
 		}
@@ -141,15 +141,15 @@ window.addEventListener('message', function (event) {
 	document.head.appendChild(styleSheet)
 
 	const vtContainer = document.createElement("div")
-	vtContainer.className = "vt-container"
+	vtContainer.className = "dlrms-container"
 
 	for (const ri of [0, 1]) {
 		const row = document.createElement("div")
-		row.className = "vt-row"
+		row.className = "dlrms-row"
 
 		for (const ci of [0, 1, 2]) {
 			const col = document.createElement("div")
-			col.className = `vt-col ${toastPositionIndex[ri][ci]}`
+			col.className = `dlrms-col ${toastPositionIndex[ri][ci]}`
 
 			row.appendChild(col)
 		}
@@ -191,7 +191,7 @@ window.addEventListener('message', function (event) {
 		const col = document.getElementsByClassName(options.position)[0]
 
 		const vtCard = document.createElement("div")
-		vtCard.className = `vt-card ${type}`
+		vtCard.className = `dlrms-card ${type}`
 		vtCard.innerHTML += svgs[type]
 		vtCard.options = {
 			...options,
