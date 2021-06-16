@@ -16,7 +16,7 @@ TriggerClientEvent('dlrms_notify','type','Type_your_message_here', duration)
 ### Notification types
 * Information - 'info'
 * Error - 'error'
-* Success - 'succ'
+* Success - 'success'
 * Warning - 'warn'
 
 ### Original
