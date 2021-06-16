@@ -1,23 +1,23 @@
 window.addEventListener('message', function (event) {
 	var item = event.data;
 	if (item.notification) {
-		if (item.notification_type == "succ") {
-			vt.success(item.notification, {
+		if (item.notification_type == "success") {
+			dlrms.success(item.notification, {
 				position: "top-right",
 				duration: item.duration
 			});
 		} else if (item.notification_type == "info") {
-			vt.info(item.notification, {
+			dlrms.info(item.notification, {
 				position: "top-right",
 				duration: item.duration
 			});
 		} else if (item.notification_type == "error") {
-			vt.error(item.notification, {
+			dlrms.error(item.notification, {
 				position: "top-right",
 				duration: item.duration
 			});
 		} else if (item.notification_type == "warn") {
-			vt.warn(item.notification, {
+			dlrms.warn(item.notification, {
 				position: "top-right",
 				duration: item.duration
 			});
@@ -140,8 +140,8 @@ window.addEventListener('message', function (event) {
 	styleSheet.innerText = styles.replace((/  |\r\n|\n|\r/gm), "")
 	document.head.appendChild(styleSheet)
 
-	const vtContainer = document.createElement("div")
-	vtContainer.className = "dlrms-container"
+	const dlrmsContainer = document.createElement("div")
+	dlrmsContainer.className = "dlrms-container"
 
 	for (const ri of [0, 1]) {
 		const row = document.createElement("div")
@@ -154,12 +154,12 @@ window.addEventListener('message', function (event) {
 			row.appendChild(col)
 		}
 
-		vtContainer.appendChild(row)
+		dlrmsContainer.appendChild(row)
 	}
 
-	document.body.appendChild(vtContainer)
+	document.body.appendChild(dlrmsContainer)
 
-	window.vt = {
+	window.dlrms = {
 		options: {
 			title: undefined,
 			position: toastPosition.TopCenter,
@@ -184,16 +184,16 @@ window.addEventListener('message', function (event) {
 
 	function show(message = "", options, type) {
 		options = {
-			...window.vt.options,
+			...window.dlrms.options,
 			...options
 		}
 
 		const col = document.getElementsByClassName(options.position)[0]
 
-		const vtCard = document.createElement("div")
-		vtCard.className = `dlrms-card ${type}`
-		vtCard.innerHTML += svgs[type]
-		vtCard.options = {
+		const DlrmsCard = document.createElement("div")
+		DlrmsCard.className = `dlrms-card ${type}`
+		DlrmsCard.innerHTML += svgs[type]
+		DlrmsCard.options = {
 			...options,
 			...{
 				message,
@@ -203,76 +203,76 @@ window.addEventListener('message', function (event) {
 			}
 		}
 
-		setVTCardContent(vtCard)
-		setVTCardIntroAnim(vtCard)
-		setVTCardBindEvents(vtCard)
-		autoDestroy(vtCard)
-		col.appendChild(vtCard)
+		setDlrmsCardContent(DlrmsCard)
+		setDlrmsCardIntroAnim(DlrmsCard)
+		setDlrmsCardBindEvents(DlrmsCard)
+		autoDestroy(DlrmsCard)
+		col.appendChild(DlrmsCard)
 	}
 
-	function setVTCardContent(vtCard) {
+	function setDlrmsCardContent(DlrmsCard) {
 		const textGroupDiv = document.createElement("div")
 
 		textGroupDiv.className = "text-group"
 
-		if (vtCard.options.title) {
-			textGroupDiv.innerHTML = `<h4>${vtCard.options.title}</h4>`
+		if (DlrmsCard.options.title) {
+			textGroupDiv.innerHTML = `<h4>${DlrmsCard.options.title}</h4>`
 		}
 
-		textGroupDiv.innerHTML += `<p>${vtCard.options.message}</p>`
+		textGroupDiv.innerHTML += `<p>${DlrmsCard.options.message}</p>`
 
-		vtCard.appendChild(textGroupDiv)
+		DlrmsCard.appendChild(textGroupDiv)
 	}
 
-	function setVTCardIntroAnim(vtCard) {
-		vtCard.style.setProperty(`margin-${vtCard.options.yPos}`, "-15px")
-		vtCard.style.setProperty("opacity", "0")
+	function setDlrmsCardIntroAnim(DlrmsCard) {
+		DlrmsCard.style.setProperty(`margin-${DlrmsCard.options.yPos}`, "-15px")
+		DlrmsCard.style.setProperty("opacity", "0")
 
 		setTimeout(() => {
-			vtCard.style.setProperty(`margin-${vtCard.options.yPos}`, "15px")
-			vtCard.style.setProperty("opacity", "1")
+			DlrmsCard.style.setProperty(`margin-${DlrmsCard.options.yPos}`, "15px")
+			DlrmsCard.style.setProperty("opacity", "1")
 		}, 50)
 	}
 
-	function setVTCardBindEvents(vtCard) {
-		vtCard.addEventListener("click", () => {
-			if (vtCard.options.closable) {
-				destroy(vtCard)
+	function setDlrmsCardBindEvents(DlrmsCard) {
+		DlrmsCard.addEventListener("click", () => {
+			if (DlrmsCard.options.closable) {
+				destroy(DlrmsCard)
 			}
 		})
 
-		vtCard.addEventListener("mouseover", () => {
-			vtCard.options.isFocus = vtCard.options.focusable
+		DlrmsCard.addEventListener("mouseover", () => {
+			DlrmsCard.options.isFocus = DlrmsCard.options.focusable
 		})
 
-		vtCard.addEventListener("mouseout", () => {
-			vtCard.options.isFocus = false
-			autoDestroy(vtCard, vtCard.options.duration)
+		DlrmsCard.addEventListener("mouseout", () => {
+			DlrmsCard.options.isFocus = false
+			autoDestroy(DlrmsCard, DlrmsCard.options.duration)
 		})
 	}
 
-	function destroy(vtCard) {
-		vtCard.style.setProperty(`margin-${vtCard.options.yPos}`, `-${vtCard.offsetHeight}px`)
-		vtCard.style.setProperty("opacity", "0")
+	function destroy(DlrmsCard) {
+		DlrmsCard.style.setProperty(`margin-${DlrmsCard.options.yPos}`, `-${DlrmsCard.offsetHeight}px`)
+		DlrmsCard.style.setProperty("opacity", "0")
 
 		setTimeout(() => {
 			if (typeof x !== "undefined") {
-				vtCard.parentNode.removeChild(v)
+				DlrmsCard.parentNode.removeChild(v)
 
-				if (typeof vtCard.options.callback === "function") {
-					vtCard.options.callback()
+				if (typeof DlrmsCard.options.callback === "function") {
+					DlrmsCard.options.callback()
 				}
 			}
 		}, 500)
 	}
 
-	function autoDestroy(vtCard) {
-		if (vtCard.options.duration !== 0) {
+	function autoDestroy(DlrmsCard) {
+		if (DlrmsCard.options.duration !== 0) {
 			setTimeout(() => {
-				if (!vtCard.options.isFocus) {
-					destroy(vtCard)
+				if (!DlrmsCard.options.isFocus) {
+					destroy(DlrmsCard)
 				}
-			}, vtCard.options.duration != null ? vtCard.options.duration : 3000)
+			}, DlrmsCard.options.duration != null ? DlrmsCard.options.duration : 3000)
 		}
 	}
 })()
