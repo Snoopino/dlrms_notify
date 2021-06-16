@@ -1,7 +1,7 @@
 window.addEventListener('message', function (event) {
 	var item = event.data;
 	if (item.notification) {
-		if (item.notification_type == "success") {
+		if (item.notification_type == "succ") {
 			vt.success(item.notification, {
 				position: "top-right",
 				duration: item.duration
