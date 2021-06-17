@@ -25,7 +25,7 @@ TriggerClientEvent('dlrms_notify', source, 'type', 'Type_your_message_here', dur
 ### Custom
 ![Image of Notification](https://cdn.discordapp.com/attachments/850181379778150420/854773606319259708/Screenshot_35.png)
 ```css
-/* Custom CSS Code*/
+/* CSS Code for Custom Style */
 .dlrms-card {
     display: flex;
     justify-content: center;
