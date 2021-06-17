@@ -8,7 +8,7 @@ TriggerEvent('dlrms_notify', 'type', 'Type_your_message_here', duration)
 Using for (Server-Side) :
 
 ```lua
-TriggerClientEvent('dlrms_notify', source. 'type', 'Type_your_message_here', duration)
+TriggerClientEvent('dlrms_notify', source, 'type', 'Type_your_message_here', duration)
 ```
 
 # If no duration is given, will default to 3000ms
