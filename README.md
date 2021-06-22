@@ -19,11 +19,18 @@ TriggerClientEvent('dlrms_notify', source, 'type', 'Type_your_message_here', dur
 * Success - 'success'
 * Warning - 'warn'
 
-### Original
+### Original Style
 ![Image of Notification](https://cdn.discordapp.com/attachments/850181379778150420/854773290257350686/Screenshot_34.png)
 
-### Custom
+### Original Style Video
+https://www.youtube.com/watch?v=gfYHG7jNzAY
+
+### Custom Style
 ![Image of Notification](https://cdn.discordapp.com/attachments/850181379778150420/854773606319259708/Screenshot_35.png)
+
+### Custom Style Video
+https://www.youtube.com/watch?v=gfYHG7jNzAY
+
 ```css
 /* CSS Code for Custom Style */
 .dlrms-card {
