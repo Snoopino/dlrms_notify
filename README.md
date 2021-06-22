@@ -29,7 +29,7 @@ https://www.youtube.com/watch?v=gfYHG7jNzAY
 ![Image of Notification](https://cdn.discordapp.com/attachments/850181379778150420/854773606319259708/Screenshot_35.png)
 
 ### Custom Style Video
-https://www.youtube.com/watch?v=gfYHG7jNzAY
+https://youtu.be/cVbuNmIiEdU
 
 ```css
 /* CSS Code for Custom Style */
