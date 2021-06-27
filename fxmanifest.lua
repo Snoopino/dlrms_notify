@@ -12,4 +12,5 @@ ui_page "html/ui.html"
 files {
 	"html/ui.html",
 	"html/js/panel.js",
+	"html/css/style.css"
 }   
