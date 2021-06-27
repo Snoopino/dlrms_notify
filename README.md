@@ -32,6 +32,45 @@ https://youtu.be/gfYHG7jNzAY
 https://youtu.be/cVbuNmIiEdU
 
 ```css
+/* CSS Code for Original Style */
+.dlrms-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 39px;
+    border-radius: 4px;
+    transition: .4s all ease-in-out;
+    position: relative;
+    background: #fff;
+    color: white;
+}
+svg {
+    position: absolute;
+    left: 10px;
+    width: 19px;
+    height: 19px;
+    fill: #fff;
+}
+.dlrms-card.success {
+    box-shadow: 0 0 2px var(--successColor);
+    background: var(--successColor);
+}
+
+.dlrms-card.warn {
+    box-shadow: 0 0 2px var(--warningColor);
+    background: var(--warningColor);
+}
+.dlrms-card.info {
+    box-shadow: 0 0 2px var(--informationColor);
+    background: var(--informationColor);
+}
+.dlrms-card.error {
+    box-shadow: 0 0 2px var(--errorColor);
+    background: var(--errorColor);
+}
+```
+
+```css
 /* CSS Code for Custom Style */
 .dlrms-card {
     display: flex;
