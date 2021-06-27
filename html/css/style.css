@@ -1,0 +1,96 @@
+:root{
+  --successColor: #2CA342;
+  --errorColor: #D60A2E;
+  --informationColor: #1271EC;
+  --warningColor: #FCC631;
+}
+
+.dlrms-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dlrms-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dlrms-col {
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dlrms-col.top-left,
+.dlrms-col.bottom-left {
+  align-items: flex-start;
+}
+
+.dlrms-col.top-right,
+.dlrms-col.bottom-right {
+  align-items: flex-end;
+}
+
+.dlrms-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 10px 39px;
+  border-radius: 4px;
+  transition: .4s all ease-in-out;
+  position: relative;
+  background: #fff;
+  color: white;
+}
+
+svg {
+  position: absolute;
+  left: 10px;
+  width: 19px;
+  height: 19px;
+  fill: #fff;
+}
+
+.dlrms-card.success {
+  box-shadow: 0 0 2px var(--successColor);
+  background: var(--successColor);
+}
+
+.dlrms-card.warn {
+  box-shadow: 0 0 2px var(--warningColor);
+  background: var(--warningColor);
+}
+.dlrms-card.info {
+  box-shadow: 0 0 2px var(--informationColor);
+  background: var(--informationColor);
+}
+.dlrms-card.error {
+  box-shadow: 0 0 2px var(--errorColor);
+  background: var(--errorColor);
+}
+
+.dlrms-card.text-group {
+  /* margin-left: 10px; */
+}
+
+.dlrms-card h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.dlrms-card p {
+  margin: 0;
+  font-size: 14px;
+}
