@@ -237,11 +237,11 @@ window.addEventListener('message', function (event) {
 	}
 
 	function setDlrmsCardIntroAnim(DlrmsCard) {
-		DlrmsCard.style.setProperty(`margin-${DlrmsCard.options.yPos}`, "-8px")
+		DlrmsCard.style.setProperty(`margin-${DlrmsCard.options.yPos}`, "-10px")
 		DlrmsCard.style.setProperty("opacity", "0")
 
 		setTimeout(() => {
-			DlrmsCard.style.setProperty(`margin-${DlrmsCard.options.yPos}`, "8px")
+			DlrmsCard.style.setProperty(`margin-${DlrmsCard.options.yPos}`, "10px")
 			DlrmsCard.style.setProperty("opacity", "1")
 		}, 50)
 	}
