@@ -1,8 +1,8 @@
-:root{
-  --successColor: #2CA342;
-  --errorColor: #D60A2E;
-  --informationColor: #1271EC;
-  --warningColor: #FCC631;
+:root {
+  --successColor: #2ca342;
+  --errorColor: #d60a2e;
+  --informationColor: #1271ec;
+  --warningColor: #fcc631;
 }
 
 .dlrms-container {
@@ -42,18 +42,19 @@
   align-items: flex-end;
 }
 
+/* CSS Code for Custom Style */
+/* CSS Code for Original Style */
 .dlrms-card {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 10px 10px 39px;
   border-radius: 4px;
-  transition: .4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
   position: relative;
   background: #fff;
   color: white;
 }
-
 svg {
   position: absolute;
   left: 10px;
@@ -61,7 +62,6 @@ svg {
   height: 19px;
   fill: #fff;
 }
-
 .dlrms-card.success {
   box-shadow: 0 0 2px var(--successColor);
   background: var(--successColor);
