@@ -41,9 +41,7 @@
 .dlrms-col.bottom-right {
   align-items: flex-end;
 }
-
 /* CSS Code for Custom Style */
-/* CSS Code for Original Style */
 .dlrms-card {
   display: flex;
   justify-content: center;
@@ -53,35 +51,34 @@
   transition: 0.4s all ease-in-out;
   position: relative;
   background: #fff;
-  color: white;
+  color: black;
 }
+
 svg {
   position: absolute;
   left: 10px;
   width: 19px;
   height: 19px;
-  fill: #fff;
 }
+
 .dlrms-card.success {
-  box-shadow: 0 0 2px var(--successColor);
-  background: var(--successColor);
+  border-left: 3px solid var(--successColor);
+  fill: var(--successColor);
 }
 
 .dlrms-card.warn {
-  box-shadow: 0 0 2px var(--warningColor);
-  background: var(--warningColor);
-}
-.dlrms-card.info {
-  box-shadow: 0 0 2px var(--informationColor);
-  background: var(--informationColor);
-}
-.dlrms-card.error {
-  box-shadow: 0 0 2px var(--errorColor);
-  background: var(--errorColor);
+  border-left: 3px solid var(--warningColor);
+  fill: var(--warningColor);
 }
 
-.dlrms-card.text-group {
-  /* margin-left: 10px; */
+.dlrms-card.info {
+  border-left: 3px solid var(--informationColor);
+  fill: var(--informationColor);
+}
+
+.dlrms-card.error {
+  border-left: 3px solid var(--errorColor);
+  fill: var(--errorColor);
 }
 
 .dlrms-card h4 {
