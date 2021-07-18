@@ -5,7 +5,6 @@ window.addEventListener("message", function (event) {
     if (audioPlayer != null) {
       audioPlayer.pause();
     }
-
     audioPlayer = new Audio("./sound/notify.mp3");
     audioPlayer.volume = 0.3;
     audioPlayer.play();
