@@ -31,9 +31,8 @@ https://youtu.be/gfYHG7jNzAY
 ### Custom Style Video
 https://youtu.be/cVbuNmIiEdU
 
-### Style CSS
+### Original CSS
 ```css
-/* CSS Code for Original Style */
 .dlrms-card.success {
   box-shadow: 0 0 2px var(--successColor);
   background: var(--successColor);
@@ -62,9 +61,8 @@ https://youtu.be/cVbuNmIiEdU
   color: #fff;
 }
 ```
-
+### Custom CSS
 ```css
-/* CSS Code for Custom Style */
 .dlrms-card.success {
   border-left: 3px solid var(--successColor);
   fill: var(--successColor);
