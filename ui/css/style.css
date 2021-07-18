@@ -61,7 +61,6 @@
   border-radius: 3px;
   transition: margin 0.3s, opacity 0.3s;
   background: #fff;
-  color: black;
 }
 
 .dlrms-card .message {
@@ -82,19 +81,23 @@ svg {
 .dlrms-card.success {
   border-left: 3px solid var(--successColor);
   fill: var(--successColor);
+  color: #000;
 }
 
 .dlrms-card.warn {
   border-left: 3px solid var(--warningColor);
   fill: var(--warningColor);
+  color: #000;
 }
 
 .dlrms-card.info {
   border-left: 3px solid var(--informationColor);
   fill: var(--informationColor);
+  color: #000;
 }
 
 .dlrms-card.error {
   border-left: 3px solid var(--errorColor);
   fill: var(--errorColor);
+  color: #000;
 }
