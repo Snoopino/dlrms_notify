@@ -35,27 +35,31 @@ https://youtu.be/cVbuNmIiEdU
 ```css
 /* CSS Code for Original Style */
 .dlrms-card.success {
-    box-shadow: 0 0 2px var(--successColor);
-    background: var(--successColor);
-    fill: #fff;
+  box-shadow: 0 0 2px var(--successColor);
+  background: var(--successColor);
+  fill: #fff;
+  color: #fff;
 }
 
 .dlrms-card.warn {
-    box-shadow: 0 0 2px var(--warningColor);
-    background: var(--warningColor);
-    fill: #fff;
+  box-shadow: 0 0 2px var(--warningColor);
+  background: var(--warningColor);
+  fill: #fff;
+  color: #fff;
 }
 
 .dlrms-card.info {
-    box-shadow: 0 0 2px var(--informationColor);
-    background: var(--informationColor);
-    fill: #fff;
+  box-shadow: 0 0 2px var(--informationColor);
+  background: var(--informationColor);
+  fill: #fff;
+  color: #fff;
 }
 
 .dlrms-card.error {
-    box-shadow: 0 0 2px var(--errorColor);
-    background: var(--errorColor);
-    fill: #fff;
+  box-shadow: 0 0 2px var(--errorColor);
+  background: var(--errorColor);
+  fill: #fff;
+  color: #fff;
 }
 ```
 
@@ -64,19 +68,23 @@ https://youtu.be/cVbuNmIiEdU
 .dlrms-card.success {
   border-left: 3px solid var(--successColor);
   fill: var(--successColor);
+  color: #000;
 }
 
 .dlrms-card.warn {
   border-left: 3px solid var(--warningColor);
   fill: var(--warningColor);
+  color: #000;
 }
 
 .dlrms-card.info {
   border-left: 3px solid var(--informationColor);
   fill: var(--informationColor);
+  color: #000;
 }
 
 .dlrms-card.error {
   border-left: 3px solid var(--errorColor);
   fill: var(--errorColor);
+  color: #000;
 }
