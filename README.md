@@ -34,45 +34,33 @@ https://youtu.be/cVbuNmIiEdU
 ### Style CSS
 ```css
 /* CSS Code for Original Style */
-svg {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.1rem;
-    height: 1.1rem;
-    fill: #fff;
-}
 .dlrms-card.success {
     box-shadow: 0 0 2px var(--successColor);
     background: var(--successColor);
+    fill: #fff;
 }
 
 .dlrms-card.warn {
     box-shadow: 0 0 2px var(--warningColor);
     background: var(--warningColor);
+    fill: #fff;
 }
+
 .dlrms-card.info {
     box-shadow: 0 0 2px var(--informationColor);
     background: var(--informationColor);
+    fill: #fff;
 }
+
 .dlrms-card.error {
     box-shadow: 0 0 2px var(--errorColor);
     background: var(--errorColor);
+    fill: #fff;
 }
 ```
 
 ```css
 /* CSS Code for Custom Style */
-svg {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.1rem;
-    height: 1.1rem;
-}
-
 .dlrms-card.success {
   border-left: 3px solid var(--successColor);
   fill: var(--successColor);
