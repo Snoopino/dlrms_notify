@@ -34,22 +34,13 @@ https://youtu.be/cVbuNmIiEdU
 ### Style CSS
 ```css
 /* CSS Code for Original Style */
-.dlrms-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 10px 10px 39px;
-    border-radius: 4px;
-    transition: .4s all ease-in-out;
-    position: relative;
-    background: #fff;
-    color: white;
-}
 svg {
     position: absolute;
-    left: 10px;
-    width: 19px;
-    height: 19px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.1rem;
+    height: 1.1rem;
     fill: #fff;
 }
 .dlrms-card.success {
@@ -73,41 +64,31 @@ svg {
 
 ```css
 /* CSS Code for Custom Style */
-.dlrms-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 10px 10px 39px;
-    border-radius: 4px;
-    transition: .4s all ease-in-out;
-    position: relative;
-    background: #fff;
-    color: black;
-}
-
 svg {
     position: absolute;
-    left: 10px;
-    width: 19px;
-    height: 19px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.1rem;
+    height: 1.1rem;
 }
 
 .dlrms-card.success {
-    border-left:3px solid var(--successColor);
-    fill: var(--successColor);
+  border-left: 3px solid var(--successColor);
+  fill: var(--successColor);
 }
 
 .dlrms-card.warn {
-    border-left:3px solid var(--warningColor);
-    fill: var(--warningColor);
+  border-left: 3px solid var(--warningColor);
+  fill: var(--warningColor);
 }
 
 .dlrms-card.info {
-    border-left:3px solid var(--informationColor);
-    fill: var(--informationColor);
+  border-left: 3px solid var(--informationColor);
+  fill: var(--informationColor);
 }
 
 .dlrms-card.error {
-    border-left:3px solid var(--errorColor);
-    fill: var(--errorColor);
+  border-left: 3px solid var(--errorColor);
+  fill: var(--errorColor);
 }
