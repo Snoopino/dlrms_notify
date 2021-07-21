@@ -1,35 +1,45 @@
 window.addEventListener("message", function (event) {
-  var data = event.data;
+  const data = event.data;
   let audioPlayer = null;
+
   if (data.transactionType == "playSound") {
-    if (audioPlayer != null) {
+    if (!audioPlayer == null) {
       audioPlayer.pause();
     }
     audioPlayer = new Audio("./sound/notify.mp3");
-    audioPlayer.volume = 0.3;
+    audioPlayer.volume = 0.5;
     audioPlayer.play();
   }
+
   if (data.notification) {
-    if (data.notification_type == "success") {
-      dlrms.success(data.notification, {
-        position: "top-right",
-        duration: data.duration,
-      });
-    } else if (data.notification_type == "info") {
-      dlrms.info(data.notification, {
-        position: "top-right",
-        duration: data.duration,
-      });
-    } else if (data.notification_type == "error") {
-      dlrms.error(data.notification, {
-        position: "top-right",
-        duration: data.duration,
-      });
-    } else if (data.notification_type == "warn") {
-      dlrms.warn(data.notification, {
-        position: "top-right",
-        duration: data.duration,
-      });
+    switch (data.notification_type) {
+      case "success":
+        dlrms.success(data.notification, {
+          position: "top-right",
+          duration: data.duration,
+        });
+        break;
+
+      case "info":
+        dlrms.info(data.notification, {
+          position: "top-right",
+          duration: data.duration,
+        });
+        break;
+
+      case "error":
+        dlrms.error(data.notification, {
+          position: "top-right",
+          duration: data.duration,
+        });
+        break;
+
+      case "warn":
+        dlrms.warn(data.notification, {
+          position: "top-right",
+          duration: data.duration,
+        });
+        break;
     }
   }
 });

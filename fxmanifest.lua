@@ -3,7 +3,7 @@ game 'gta5'
 author 'Delarmuss'
 version '1.1'
 client_scripts {
-	'client/client.lua'
+	'client.lua'
 }
 ui_page "ui/ui.html"
 files {
@@ -12,3 +12,6 @@ files {
 	"ui/css/*.css",
 	"ui/sound/*.mp3"
 }   
+exports {
+	'SendAlert'
+}
