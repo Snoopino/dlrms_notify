@@ -11,6 +11,12 @@ Using for (Server-Side) :
 TriggerClientEvent('dlrms_notify', source, 'type', 'Type_your_message_here', duration)
 ```
 
+Using Exports
+
+```lua
+exports['dlrms_notify']:SendAlert('type','Type_your_message_here', duration)
+```
+
 # If no duration is given, will default to 3000ms
 
 ### Notification types
