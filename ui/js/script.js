@@ -2,13 +2,15 @@ window.addEventListener("message", function (event) {
   const data = event.data;
   let audioPlayer = null;
 
-  if (data.transactionType == "playSound") {
-    if (!audioPlayer == null) {
-      audioPlayer.pause();
+  if (data.action_type == "playSound") {
+    if (data.use_sound) {
+      if (!audioPlayer == null) {
+        audioPlayer.pause();
+      }
+      audioPlayer = new Audio("./sound/notify.mp3");
+      audioPlayer.volume = 0.5;
+      audioPlayer.play();
     }
-    audioPlayer = new Audio("./sound/notify.mp3");
-    audioPlayer.volume = 0.5;
-    audioPlayer.play();
   }
 
   if (data.notification) {
