@@ -80,7 +80,7 @@ svg {
 
 /* Original Style */
 
-/* .dlrms-card.success {
+.dlrms-card.success {
   box-shadow: 0 0 2px var(--successColor);
   background: var(--successColor);
   fill: #fff;
@@ -106,11 +106,11 @@ svg {
   background: var(--errorColor);
   fill: #fff;
   color: #fff;
-} */
+}
 
 /* Custom Style */
 
-.dlrms-card.success {
+/* .dlrms-card.success {
   border-left: 3px solid var(--successColor);
   fill: var(--successColor);
   color: #000;
@@ -132,4 +132,4 @@ svg {
   border-left: 3px solid var(--errorColor);
   fill: var(--errorColor);
   color: #000;
-}
+} */
