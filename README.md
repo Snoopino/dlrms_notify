@@ -2,22 +2,22 @@
 Using for (Client-Side) :
 
 ```lua
-TriggerEvent('dlrms_notify', 'type', 'Type_your_message_here', duration)
+TriggerEvent('dlrms_notify', 'type', 'Type_your_message_here', use_sound, duration)
 ```
 
 Using for (Server-Side) :
 
 ```lua
-TriggerClientEvent('dlrms_notify', source, 'type', 'Type_your_message_here', duration)
+TriggerClientEvent('dlrms_notify', source, 'type', 'Type_your_message_here', use_sound, duration)
 ```
 
 Using Exports
 
 ```lua
-exports['dlrms_notify']:SendAlert('type','Type_your_message_here', duration)
+exports['dlrms_notify']:SendAlert('type','Type_your_message_here', use_sound, duration)
 ```
-
-# If no duration is given, will default to 3000ms
+## use_sound : true or false
+## If no duration is given, will default to 3000ms
 
 ### Notification types
 * Information - 'info'
