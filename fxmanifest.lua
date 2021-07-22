@@ -7,10 +7,10 @@ client_scripts {
 }
 ui_page "ui/ui.html"
 files {
-	"ui/ui.html",
-	"ui/js/*.js",
 	"ui/css/*.css",
-	"ui/sound/*.mp3"
+	"ui/js/*.js",
+	"ui/sounds/*.ogg",
+	"ui/ui.html"
 }   
 exports {
 	'SendAlert'
